@@ -1,14 +1,15 @@
-import React, { Fragment } from "react";
+import React from "react";
+import Login from "./pages/Login/Login";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Formulario from "./components/Formulario";
 
 function App() {
   return (
-    <Fragment>
-      <h2>
-        <Formulario />
-      </h2>
-    </Fragment>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
